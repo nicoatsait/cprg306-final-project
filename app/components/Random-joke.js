@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";  
 import Joke from "./Joke";
 
-export default function RandomJoke({ saveJoke, onAddSaved }) {
+export default function RandomJoke({ onAddSaved }) {
     const [joke, setJoke] = useState(null);
 
     const loadRandomJoke = async () => {
@@ -46,7 +46,7 @@ export default function RandomJoke({ saveJoke, onAddSaved }) {
         <div className="text-slate-950s">
           <h2 className="text-slate-950">Random Joke</h2>
           {joke ? (
-            <Joke joke={joke} saveJoke={onAddSaved} />
+            <Joke joke={joke} onAddSaved={onAddSaved} />
           ) : (
             "Loading..."
           )}
@@ -56,4 +56,3 @@ export default function RandomJoke({ saveJoke, onAddSaved }) {
         </div>
       );
     };
-    

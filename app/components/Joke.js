@@ -1,6 +1,6 @@
-export default function Joke({ joke, saveJoke, removeJoke }) {
+export default function Joke({ joke, onAddSaved, removeJoke }) {
     function handleSaveJoke() {
-        saveJoke(joke);
+        onAddSaved && onAddSaved(joke);
     }
 
     function handleRemoveJoke() {
@@ -11,10 +11,10 @@ export default function Joke({ joke, saveJoke, removeJoke }) {
         <main>
             <div className="bg-white shadow-md rounded-md p-4 m-1">
                 <p className="text-lg font-bold mb-2 italic">{joke.value}</p>
-            {saveJoke && (
+            {onAddSaved && (
                 <button
-                className='className="text-lg font-bold mb-2 italic ${
-                    joke.isSaved ? "text-red-500" : "text-blue-500"}"'
+                className={`text-lg font-bold mb-2 italic ${joke.isSaved ? "text-red-500" : "text-blue-500"}`}
+                    
                 onClick={handleSaveJoke}>
                     {joke.isSaved ? "UnSave" : "Save"}
                 </button>

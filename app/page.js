@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -30,7 +31,7 @@ export default function Home() {
         <StudentsInfo />
 
       <div className=" text-zinc-900  grid grid-cols-3 gap-4 m-4">
-         <RandomJoke onAddFavorite={handleAddSaved} />
+         <RandomJoke onAddSaved={handleAddSaved} />
          <hr className="my-4" />
          <SavedJokes
             jokes={savedJokes}
