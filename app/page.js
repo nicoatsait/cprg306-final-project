@@ -34,11 +34,10 @@ export default function Home() {
          <SavedJokes
             jokes={savedJokes}
             removeJoke={handleRemoveSaved}
-         />
-         
+         />         
       </div>
       <footer>
-        <StudentsInfo />
+        <StudentsInfo/>
       </footer>
     </main>
   )
