@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from 'next/image';
@@ -26,19 +27,18 @@ export default function Home() {
       <div className="text-4xl font-bold text-blue-800 my-8">
         <h1>Chuckle Norris Joke Generator</h1>
       </div>
-
-        <StudentsInfo />
-
-      <div className=" text-zinc-900  grid grid-cols-3 gap-4 m-4">
+      
+      <div className=" text-zinc-900 m-4 w-96">
          <RandomJoke onAddSaved={handleAddSaved} />
-         <hr className="my-4" />
+         <hr className="my-4"/>
          <SavedJokes
             jokes={savedJokes}
             removeJoke={handleRemoveSaved}
-         />
-         
+         />         
       </div>
-        
+      <footer>
+        <StudentsInfo/>
+      </footer>
     </main>
   )
 }
