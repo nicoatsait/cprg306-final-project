@@ -8,8 +8,7 @@ export default function RandomJoke({ onAddSaved }) {
 
     const loadRandomJoke = async () => {
         try {
-
-
+          // Get available categories
           const categoriesResponse = await fetch("https://api.chucknorris.io/jokes/categories");
           const categories = await categoriesResponse.json();
   

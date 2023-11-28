@@ -28,9 +28,9 @@ export default function Home() {
         <h1>Chuckle Norris Joke Generator</h1>
       </div>
 
-        <StudentsInfo />
+      
 
-      <div className=" text-zinc-900  grid grid-cols-3 gap-4 m-4">
+      <div className=" text-zinc-900 m-4 w-auto w-96">
          <RandomJoke onAddSaved={handleAddSaved} />
          <hr className="my-4" />
          <SavedJokes
@@ -39,7 +39,9 @@ export default function Home() {
          />
          
       </div>
-        
+      <footer>
+        <StudentsInfo />
+      </footer>
     </main>
   )
 }
