@@ -45,7 +45,10 @@ export default function RandomJoke({ onAddSaved }) {
         <div className="text-slate-950s">
           <h2 className="text-slate-950">Random Joke</h2>
           {joke ? (
-            <Joke joke={joke} onAddSaved={onAddSaved} />
+            <div>              
+              <Joke joke={joke} onAddSaved={onAddSaved} />           
+            </div>
+
           ) : (
             "Loading..."
           )}
