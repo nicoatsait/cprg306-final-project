@@ -3,9 +3,10 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import StudentsInfo from './components/footer';
-import Header from './components/header';
-import Footer from './components/footer';
+import { useState, useEffect } from 'react';
+import StudentsInfo from './components/studentsInfo';
+import RandomJoke from './components/Random-joke';
+import SavedJokes from './components/Saved-jokes';
 
 
 export default function Home() {
@@ -23,22 +24,22 @@ export default function Home() {
 
   return (
     <main className='flex flex-col items-center justify-center min-h-screen bg-gray-50'>
-      <Header />
-      <div className=''>
-      <section>
-      <div className="grid grid-cols-1 gap-4 m-4">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Generate Random Joke</button>
+      <div className="text-4xl font-bold text-blue-800 my-8">
+        <h1>Chuckle Norris Joke Generator</h1>
       </div>
-      </section>
-      <section> 
-      <div className="grid grid-cols-1 gap-4 m-4">
-          <h2 className="text-xl font-small text-black">My Favourites</h2>
-          No favourites yet!
+      
+      <div className=" text-zinc-900 m-4 w-96">
+         <RandomJoke onAddSaved={handleAddSaved} />
+         <hr className="my-4"/>
+         <SavedJokes
+            jokes={savedJokes}
+            removeJoke={handleRemoveSaved}
+         />
+         
       </div>
-      </section>
-      </div>
-      <Footer />
-        
+      <footer>
+        <StudentsInfo />
+      </footer>
     </main>
   )
 }
