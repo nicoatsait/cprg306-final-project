@@ -1,23 +1,28 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import StudentsInfo from './components/studentsInfo';
+import StudentsInfo from './components/footer';
+import Header from './components/header';
+import Footer from './components/footer';
 
 
 export default function Home() {
   return (
     <main className='flex flex-col items-center justify-center min-h-screen bg-gray-50'>
-      <div className="text-4xl font-bold text-blue-800 my-8">
-        <h1>Chuckle Norris Joke Generator</h1>
+      <Header />
+      <div className=''>
+      <section>
+      <div className="grid grid-cols-1 gap-4 m-4">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Generate Random Joke</button>
       </div>
-
-        <StudentsInfo />
-
-      <div className="grid grid-cols-3 gap-4 m-4">
-          <Link href="Joke" className="flex-1 text-center bg-blue-100 hover:bg-blue-300 transition duration-300 ease-in-out cursor-pointer p-6 rounded-lg">Generate Joke</Link>
-          <Link href="Random-joke" className="flex-1 text-center bg-blue-100 hover:bg-blue-300 transition duration-300 ease-in-out cursor-pointer p-6 rounded-lg">Random Joke</Link>
-          <Link href="Saved-jokes" className="flex-1 text-center bg-blue-100 hover:bg-blue-300 transition duration-300 ease-in-out cursor-pointer p-6 rounded-lg">Saved Jokes</Link>
-
+      </section>
+      <section> 
+      <div className="grid grid-cols-1 gap-4 m-4">
+          <h2 className="text-xl font-small text-black">My Favourites</h2>
+          No favourites yet!
       </div>
+      </section>
+      </div>
+      <Footer />
         
     </main>
   )
