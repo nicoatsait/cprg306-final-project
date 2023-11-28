@@ -1,3 +1,6 @@
+
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 import StudentsInfo from './components/footer';
@@ -6,6 +9,18 @@ import Footer from './components/footer';
 
 
 export default function Home() {
+  const [savedJokes, setSavedJokes] = useState([]);
+
+  function handleAddSaved(joke){
+    if (joke && !savedJokes.some((q) => q.id === joke.id)) {
+      setSavedJokes((prevJokes) => [...savedJokes, joke]);
+    }
+  }
+
+  function handleRemoveSaved(joke){
+    setSavedJokes((prevJokes) => prevJokes.filter((q) => q.id !== joke.id));
+  }
+
   return (
     <main className='flex flex-col items-center justify-center min-h-screen bg-gray-50'>
       <Header />
