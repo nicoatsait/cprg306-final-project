@@ -26,6 +26,7 @@ export default function Home() {
     <main className='flex flex-col items-center justify-center min-h-screen bg-gray-50'>
       <div className="text-4xl font-bold text-blue-800 my-8">
         <h1>Chuckle Norris Joke Generator</h1>
+        <h3 className="text-center  ">secretPage</h3>
       </div>
       
       <div className=" text-zinc-900 m-4 w-96">
@@ -36,10 +37,10 @@ export default function Home() {
             removeJoke={handleRemoveSaved}
          />         
       </div>
-      <Link href="/secretPage">
+      <Link href="/">
         
-          <button className="invisible text-white font-bold py-1 px-2 rounded cursor-pointer">
-            
+          <button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Go Back to Main Page
           </button>
         
       </Link>
