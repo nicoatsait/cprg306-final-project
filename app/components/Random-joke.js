@@ -27,7 +27,8 @@ export default function RandomJoke({ onAddSaved }) {
 
             console.log("Random Category:", randomCategory);
             console.log("API Response:", newJoke);
-            setJoke(newJoke);
+            // Add category to joke object
+            setJoke({...newJoke, category: randomCategory});
       
             
       
@@ -45,8 +46,11 @@ export default function RandomJoke({ onAddSaved }) {
         <div className="text-slate-950s">
           <h2 className="text-slate-950">Random Joke</h2>
           {joke ? (
-            <div>              
-              <Joke joke={joke} onAddSaved={onAddSaved} />           
+            <div>  
+              <p>Category: {joke.category}</p>            
+              <Joke joke={joke} onAddSaved={onAddSaved}/>  
+              <p className='text-red-500'>Some jokes may contain explicit contents.</p>
+              <p className='text-red-500'>Use them responsibly.</p>         
             </div>
 
           ) : (
