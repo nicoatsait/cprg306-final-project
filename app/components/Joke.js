@@ -28,7 +28,6 @@ export default function Joke({ joke, onAddSaved, removeJoke }) {
         removeJoke(joke);
     }
 
-  
     return (
         <main>
             <div className="bg-white shadow-md rounded-md p-4 m-1">
