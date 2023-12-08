@@ -60,9 +60,9 @@ export default function RandomJoke({ onAddSaved }) {
           ) : (
             "Loading..."
           )}
-          <button className="flex items-center bg-blue-500 text-white py-2 px-4 rounded mx-auto">
-            <Image src={fistOutlineImage} alt="Image" onClick={loadRandomJoke} width={40} height={160} className="mr-2" style={{ display: 'block', margin: '0 auto' }} />
-            <span>Get Another Joke</span>
+          <button className="flex items-center bg-blue-500 text-white py-2 px-4 rounded mx-auto" onClick={loadRandomJoke}>
+            <Image src={fistOutlineImage} alt="Image" width={40} height={160} className="mr-2" style={{ display: 'block', margin: '0 auto' }} />
+            Get Another Joke
           </button>
         </div>
       );
