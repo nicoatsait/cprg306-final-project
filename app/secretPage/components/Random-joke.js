@@ -1,7 +1,10 @@
 "use client";
 
+import Image from 'next/image';
 import { useState, useEffect } from "react";  
 import Joke from "./Joke";
+import fistOutlineImage from 'app/assets/fist-outline-png.png';
+
 
 export default function RandomJoke({ onAddSaved }) {
     const [joke, setJoke] = useState(null);
@@ -52,9 +55,10 @@ export default function RandomJoke({ onAddSaved }) {
           ) : (
             "Loading..."
           )}
-          <button
-            className="mt-4 px-4 py-2 w-full rounded-md bg-gray-300 hover:bg-emerald-300"
-           onClick={loadRandomJoke}>Get Another Joke</button>
-        </div>
+          <button className="flex items-center bg-blue-500 text-white py-2 px-4 rounded mx-auto">
+            <span>Get Another Joke</span>
+            <Image src={fistOutlineImage} alt="Image" onClick={loadRandomJoke} width={40} height={160} className="ml-2" style={{ display: 'block', margin: '0 auto' }} />
+          </button>
+          </div>
       );
     };
