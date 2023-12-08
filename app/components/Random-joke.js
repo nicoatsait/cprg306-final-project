@@ -51,7 +51,7 @@ export default function RandomJoke({ onAddSaved }) {
               <Joke joke={joke} onAddSaved={onAddSaved}/>  
               <p className='text-red-500'>Some jokes may contain explicit contents.</p>
               <p className='text-red-500'>Use them responsibly.</p>  
-              <p className='text-xs text-slate-300'>Find Chuckle Norris' secret page for some extra juicy content.</p>       
+              <p className='text-xs text-slate-300'>Find Chuckle Norris&apos; secret page for some extra juicy content.</p>       
             </div>
 
           ) : (
